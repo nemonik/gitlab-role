@@ -12,8 +12,8 @@
   set_fact:
     images:
       - { repository: "sameersbn/gitlab", tag: "{{ gitlab_version }}" }
-      - { repository: "sameersbn/redis", tag: "4.0.9-1" }
-      - { repository: "sameersbn/postgresql", tag: "10-2" }
+      - { repository: "redis", tag: "5.0.9" }
+      - { repository: "sameersbn/postgresql", tag: "11-20200524" }
   when:
     images_cache_path is defined
   tags:
