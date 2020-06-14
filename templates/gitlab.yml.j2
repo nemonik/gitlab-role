@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: {{ registry_host }}:{{ registry_port }}/sameersbn/redis:4.0.9-1
+        image: {{ registry_host }}:{{ registry_port }}/redis:5.0.9
         imagePullPolicy: IfNotPresent
         ports:
         - name: redis
@@ -126,7 +126,7 @@ spec:
     spec:
       containers:
       - name: postgresql
-        image: {{ registry_host }}:{{ registry_port }}/sameersbn/postgresql:10-2
+        image: {{ registry_host }}:{{ registry_port }}/sameersbn/postgresql:11-20200524
         imagePullPolicy: IfNotPresent
         env:
         - name: DB_NAME
