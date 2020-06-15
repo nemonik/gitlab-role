@@ -20,7 +20,7 @@ Requires Kubernetes, MetalLb and private Docker Registry installed.
 | docker_delay               | yes      | 10                    | Integer value       | delay in seconds between pull retries                                                      |
 | default_retries            | yes      | 60                    | Integer value       | default number of retries                                                                  |
 | default_delay              | yes      | 60                    | Integer value       | default delay in seconds between retries                                                   |
-| gitlab_version             | yes      | 13.0.5                | tag                 | the [sameersbn/gitlab image](https://hub.docker.com/r/sameersbn/gitlab/tags) tag to deploy |
+| gitlab_version             | yes      | 13.0.6                | tag                 | the [sameersbn/gitlab image](https://hub.docker.com/r/sameersbn/gitlab/tags) tag to deploy |
 | gitlab_host                | yes      | 192.168.0.202         | ip address          | the ip address to expose as                                                                |
 | gitlab_port                | yes      | 80                    | Integer value       | the port to listen on for http                                                             |
 | gitlab_ssh_port            | yes      | 10022                 | Integer value       | the port to listen on for ssh                                                              |
