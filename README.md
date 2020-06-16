@@ -26,7 +26,7 @@ Requires Kubernetes, MetalLb and private Docker Registry installed.
 | gitlab_ssh_port            | yes      | 10022                 | Integer value       | the port to listen on for ssh                                                              |
 | gitlab_user                | yes      | root                  | String value        | the admin user                                                                             | 
 | vault_gitlab_root_password | yes      |                       | String value        | the admin password                                                                         |           
-| images_cache_path          | no       | /vagrant/cache/images | Path                | Path to folder used to cache saved Docker images                                           |
+| images_cache_path          | no       | not define            | Path                | Path to folder used to cache saved Docker images                                           |
 
 ## Example Playbook
 

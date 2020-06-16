@@ -3,5 +3,4 @@
 default_retries: 60
 default_delay: 10
 gitlab_version: 3.0.6
-images_cache_path: /vagrant/cache/images
 
