@@ -70,16 +70,6 @@
     until: result is succeeded
     loop: "{{ images }}"
 
-  - name: tag and push {{ images }} into private registry
-    shell: |
-      docker tag {{ item.repository }}:{{ item.tag }} {{ registry_host }}:{{ registry_port }}/{{ item.repository }}:{{ item.tag }}
-      docker push {{ registry_host }}:{{ registry_port }}/{{ item.repository }}:{{ item.tag }}
-    retries: "{{ default_retries }}"
-    delay: "{{ default_delay }}"
-    register: result
-    until: result is succeeded
-    loop: "{{ images }}"
-
   - name: build nemonik/gitlab:{{ gitlab_version }} and push into private container registry
     docker_image:
       name: "nemonik/gitlab"
