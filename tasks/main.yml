@@ -19,14 +19,6 @@
   tags:
     - gitlab
 
-- name: load {{ images }} from cache
-  include_tasks: retrieve_container_image.yml
-  loop: "{{ images }}"
-  when:
-    images_cache_path is defined
-  tags:
-    - gitlab
-
 - name: ensure /home/{{ ansible_user_id }}/gitlab exists
   file:
     path: /home/{{ ansible_user_id }}/gitlab
@@ -58,6 +50,8 @@
   - name: load {{ images }} from cache
     include_tasks: retrieve_container_image.yml
     loop: "{{ images }}"
+    when:
+      images_cache_path is defined
 
   - name: pull {{ images }} container images
     docker_image:
