@@ -45,7 +45,7 @@
   tags:
     - gitlab
 
-- name: emplace images into private container registry
+- name: retrieve images, build nemonik/gitlab:{{ gitlab_version }} and push into private container registry
   block:
   - name: load {{ images }} from cache
     include_tasks: retrieve_container_image.yml
