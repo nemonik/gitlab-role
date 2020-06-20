@@ -2,5 +2,8 @@
 # defaults file for k3s-server
 default_retries: 60
 default_delay: 10
+docker_timeout: 300
+docker_retries: 60
+docker_delay: 10
 gitlab_version: 3.0.6
 
