@@ -61,3 +61,5 @@
     fi
   args:
     executable: /bin/bash
+  async: "{{ cache_container_timeout|default('300') }}"
+  poll: 0
