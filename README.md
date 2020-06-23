@@ -48,7 +48,7 @@ An example can be found used in my Hands-on DevOps course's [ansible/master-play
 The above Ansible playbook uses my
 
 - [Common role](https://github.com/nemonik/common-role) to configure the instance past the base CentOS 7, Alpine 3.10 or Ubuntu Bionic image
-- [Docker rol](https://github.com/nemonik/docker-role) to install and configure Docker
+- [Docker role](https://github.com/nemonik/docker-role) to install and configure Docker
 - [Docker-compose role](https://github.com/nemonik/docker-compose-role) to install Docker-compose
 - [Docker Registry role](https://github.com/nemonik/docker-registry-role) to install a private Docker registry
 - [K3s-server role](https://github.com/nemonik/k3s-server-role) to install Lightweight Kubernetes (K3s)
