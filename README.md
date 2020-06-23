@@ -34,13 +34,26 @@ An example can be found used in my Hands-on DevOps course's [ansible/master-play
 - hosts: masters
   remote_user: vagrant
   roles:
+    - common
+    - docker
+    - docker-compose
+    - docker-registry
     - k3s-server
     - docker-registry
     - metallb
     - gitlab
 ```
 
-The above Ansible playbook uses my [K3s-server role](https://github.com/nemonik/k3s-server-role) to install Lightweight Kubernetes (K3s), my [metallb role](https://github.com/nemonik/metallb-role) to install MetalLB and my [Docker Registry role](https://github.com/nemonik/docker-registry-role) to install a private Docker registry.
+
+The above Ansible playbook uses my
+
+- [Common role](https://github.com/nemonik/common-role) to configure the instance past the base CentOS 7, Alpine 3.10 or Ubuntu Bionic image
+- [Docker rol](https://github.com/nemonik/docker-role) to install and configure Docker
+- [Docker-compose role](https://github.com/nemonik/docker-compose-role) to install Docker-compose
+- [Docker Registry role](https://github.com/nemonik/docker-registry-role) to install a private Docker registry
+- [K3s-server role](https://github.com/nemonik/k3s-server-role) to install Lightweight Kubernetes (K3s)
+- [metallb role](https://github.com/nemonik/metallb-role) to install MetalLB
+- [This role](https://github.com/nemonik/gitlab-role) to install GitLab
 
 For more information and to see this role put into action checkout my [Hands-on DevOps class](https://github.com/nemonik/hands-on-DevOps) project.
 
