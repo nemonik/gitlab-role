@@ -10,21 +10,23 @@ Requires Docker, private Docker Registry, Kubernetes, and MetalLb be installed.
 
 ## Role Variables
 
-| Variable                   | Required | Default               | Choices             | Comments                                                                                   |
-|----------------------------|----------|-----------------------|---------------------|--------------------------------------------------------------------------------------------|
-| docker_timeout             | yes      | 300                   | Integer value       | Number of seconds before docker pull timeout                                               |
-| docker_retries             | yes      | 60                    | Integer value       | Number of tries for docker pull                                                            |
-| docker_delay               | yes      | 10                    | Integer value       | Delay in seconds between pull retries                                                      |
-| default_retries            | yes      | 60                    | Integer value       | Default number of retries                                                                  |
-| default_delay              | yes      | 60                    | Integer value       | Default delay in seconds between retries                                                   |
-| gitlab_version             | yes      | 13.0.6                | tag                 | The [sameersbn/gitlab image](https://hub.docker.com/r/sameersbn/gitlab/tags) tag to deploy |
-| gitlab_host                | yes      | not defined           | ip address          | IP address to expose as                                                                    |
-| gitlab_port                | yes      | 80                    | Integer value       | Port to listen on                                                                          |
-| gitlab_ssh_port            | yes      | 10022                 | Integer value       | Port to listen on for SSH                                                                  |
-| gitlab_user                | yes      | root                  | String value        | The admin user                                                                             | 
-| vault_gitlab_root_password | yes      |                       | String value        | The admin password                                                                         |           
-| images_cache_path          | no       | not defined           | Path                | Path to folder used to cache saved Docker images                                           |
-| cache_container_timeout    | no       | 300 seconds           | Integer value       | Number of seconds before Ansible times out                                                 |
+| Variable                   | Required | Default               | Choices       | Comments                                                                                   |
+|----------------------------|----------|-----------------------|---------------|--------------------------------------------------------------------------------------------|
+| docker_timeout             | yes      | 300                   | Integer value | Number of seconds before docker pull timeout                                               |
+| docker_retries             | yes      | 60                    | Integer value | Number of tries for docker pull                                                            |
+| docker_delay               | yes      | 10                    | Integer value | Delay in seconds between pull retries                                                      |
+| default_retries            | yes      | 60                    | Integer value | Default number of retries                                                                  |
+| default_delay              | yes      | 60                    | Integer value | Default delay in seconds between retries                                                   |
+| gitlab_version             | yes      | 13.0.6                | tag           | The [sameersbn/gitlab image](https://hub.docker.com/r/sameersbn/gitlab/tags) tag to deploy |
+| gitlab_host                | yes      | not defined           | IP address    | IP address to expose as                                                                    |
+| gitlab_port                | yes      | 80                    | Integer value | Port to listen on                                                                          |
+| gitlab_ssh_port            | yes      | 10022                 | Integer value | Port to listen on for SSH                                                                  |
+| gitlab_user                | yes      | root                  | String value  | The admin user                                                                             | 
+| vault_gitlab_root_password | yes      |                       | String value  | The admin password store encrypted in an Ansible vault file                                |
+| registry_host              | yes      | not defined           | String value  | IP address of private Docker registry                                                      |
+| registry_port              | yes      | not defined           | Integer value | Port the private Docker registry listens on                                                |
+| images_cache_path          | no       | not defined           | Path          | Path to folder used to cache saved Docker images                                           |
+| cache_container_timeout    | no       | 300 seconds           | Integer value | Number of seconds before Ansible times out                                                 |
 
 ## Example Playbook
 
