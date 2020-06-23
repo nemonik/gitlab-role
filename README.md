@@ -6,7 +6,7 @@ An Ansible role for ensuring the configuration of [GitLab](https://about.gitlab.
 
 ## Requirements
 
-Requires Kubernetes, MetalLb and private Docker Registry installed.
+Requires Docker, private Docker Registry, Kubernetes, and MetalLb be installed.
 
 ## Role Variables
 
