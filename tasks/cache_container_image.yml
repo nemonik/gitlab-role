@@ -49,7 +49,7 @@
 
       if [ ! -f "{{ images_cache_path }}/${archive_name}.tar" ]; then
         docker save ${image_in_docker_storage} > $tempfile
-        if [[ "windows" == "{{ host_os }}" ]]; then
+        if [[ "windows" == "{{ host_os | default('') }}" ]]; then
           sudo su;
         fi
         cp -f $tempfile {{ images_cache_path }}/${archive_name}.tar
