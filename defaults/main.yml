@@ -5,5 +5,5 @@ default_delay: 10
 docker_timeout: 300
 docker_retries: 60
 docker_delay: 10
-gitlab_version: 3.0.6
+gitlab_version: 13.2.3
 
